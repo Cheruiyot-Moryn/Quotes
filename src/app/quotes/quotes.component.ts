@@ -17,6 +17,43 @@ export class QuotesComponent implements OnInit {
         new Quotes('You need your own love to save your heart','Rithvik Singh','Pinterest',new Date(2021,2,24),9,2),
         new Quotes('Be your own version to smile','Anyoymous', 'Ananya Bhatt',new Date(2020,7,4),1,0),
     ]
+
+    addNewQuote(quote: Quotes) {
+       
+      this.quotes.push(quote)
+    }
+
+  toggleDetails(index: string | number) {
+      
+      this.quotes[index].const showDetails = !this.quotes[index].showDetails;
+    }  
+
+    deletingQuote(deleteQuote: any, index: number){
+      if(deleteQuote){
+          let toDelete =confirm("Are you sure you want to delete this quote?")
+
+          if(toDelete){
+              this.quotes.splice(index,1)
+          }
+      }
+  }
+
+  highlightHighest() {
+        
+    let quotesUpvote = []
+    let highestUpVote: number
+    for (let j = 0; j < this.quotes.length; j++) {
+      quotesUpvote.push(this.quotes[j].upvote)
+    }
+
+    quotesUpvote.sort(function (a, b) {
+      //if b>a then b-a>0 and will return a positive number
+    return b - a
+  })
+  highestUpVote = quotesUpvote[0]
+  return highestUpVote;
+}
+
   constructor() { }
 
   ngOnInit(): void {
