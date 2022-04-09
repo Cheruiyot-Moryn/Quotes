@@ -1,6 +1,12 @@
 # Quotes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+## Author
+
+Cheruiyot-Moureen
+
+## Description
+
+This is an angular cli application that displays quotes,input new quote,upvote,downvote and delete a quote.
 
 ## Development server
 
@@ -25,3 +31,33 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Installation
+
+Open Terminal
+
+git clone [https://github.com/Cheruiyot-Moryn/Quotes.git]
+
+cd Quotes
+
+open with the text editor of your choice
+
+## Technologies used
+
+[AngularCLI]
+
+HTML5
+
+CSS
+
+Bootstrap
+
+## Contact Information
+
+If you have any queries or contributions reach me through my email[ctotomc98@gmail.com]
+
+## License
+
+MIT License
+
+Copyright (c) 2022 Cheruiyot Moryn

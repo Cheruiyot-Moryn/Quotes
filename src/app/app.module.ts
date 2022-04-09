@@ -24,6 +24,14 @@ import { DateCountPipe } from './date-count.pipe';
     AppRoutingModule,
     FormsModule
   ],
+  exports: [
+    QuotesComponent,
+    HighlightDirective,
+    QuoteFormComponent,
+    QuotesDetailComponent,
+    DateCountPipe
+  ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

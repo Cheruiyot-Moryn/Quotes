@@ -1,13 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Quotes } from '../quotes';
-import { }
 
 @Component({
   selector: 'app-quotes',
   templateUrl: './quotes.component.html',
   styleUrls: ['./quotes.component.css']
 })
+
 export class QuotesComponent implements OnInit {
+
+   public selectedQuote:{
+     name : string
+   } = {
+     name : ''
+   }
 
     // Quotes Array
     quotes:Quotes[]=[
@@ -24,9 +30,9 @@ export class QuotesComponent implements OnInit {
       this.quotes.push(quote)
     }
 
-  toggleDetails(index: string | number) {
+  toggleDetails(name : string) {
+        this.selectedQuote.name = name;
       
-      this.quotes[index].const showDetails = !this.quotes[index].showDetails;
     }  
 
     deletingQuote(deleteQuote: any, index: number){
