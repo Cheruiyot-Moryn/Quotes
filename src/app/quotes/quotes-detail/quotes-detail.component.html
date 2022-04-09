@@ -1,0 +1,17 @@
+<div class="card-footer text-muted">
+    <small>
+        Submitted by {{quote.author}} on {{quote.submissionDate|date}} <b style="color:#FF8C00;">({{quote.submissionDate|timeQuote}} day(s) ago)</b>.
+    </small>
+    <button class="btn" style="color:red;" (click)="quoteDelete(true)">
+        <i class="fas fa-trash-alt"></i>
+        Delete
+    </button>
+    <button class="btn" (click)="downVote()">{{quote.downvote}}
+        <i class="fas fa-thumbs-down"></i>
+    </button>
+    <button class="btn" (click)="upVote()">{{quote.upvote}}
+        <i class="fas fa-thumbs-up"></i>
+    </button>
+    
+    
+</div>
